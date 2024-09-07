@@ -1,0 +1,152 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $fontColor;
+  background-color: #122620;
+  padding: 0;
+  margin:0;
+}
+#headerWrapper {
+  background-color: #F4EBD0;
+  // #3D3D3D, #262626
+  color: $fontColor;
+}
+header {
+  display: grid;
+  grid-template-columns: 50px auto;
+  column-gap: $gutter;
+  align-items: center; //vertically
+  padding: 0.5rem $gutter;
+  gap: 8px;
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: $normalWeight;
+  }
+  span {
+    font-size: 1.6rem;
+    font-weight: $lightWeight;
+    color: $primaryColor;
+  }
+}
+
+#navWrapper {
+  background-color: #aeb4a9;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+nav {
+  ul {
+    padding: 0;
+    margin: 0 $gutter;
+  }
+  ul li {
+    list-style-type: none;
+  }
+  ul li a {
+    color: $fontColor;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem $gutter;
+  }
+  ul li.active a {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $primaryColor;
+    border-radius: 5px;
+  }
+}
+
+// a {
+//   display: block;
+//   padding: 0.75rem;
+//   color: #262626;
+//   text-align: center;
+//   text-decoration: none;
+//   &:hover {
+//     color: #FF7F11;
+//   }
+
+/* --------------------------- MAIN --------------------------- */
+
+// main {padding: 1rem 2vw}
+// main > div {border: 3px dashed green}
+
+// main > div > div {
+//   border: 1px dashed deeppink;
+//   text-align: center;
+//   h2 {font-size: 1.2rem;}
+//   img {display: block; width: 100%; height:auto;}
+// }
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 10px
+}
+section div {
+  width: 100%;
+  // padding: 1rem $gutter;
+  // margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  margin: 0;
+  img {
+    width: 100%;
+    height: auto;
+    display:block;
+  }
+  h2 {
+    background-color: #D6AD60;
+    margin:0;
+    padding: .6rem;
+  }
+  p {
+    padding: 0 0 .6rem .6rem;
+    margin: 0;
+    background-color: #D6AD60;
+  }
+}
+
+section div:hover {
+  box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+// The footer stuff below
+#footerWrapper {
+  background-color: #F4EBD0;
+  margin-top: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+footer {
+  font-size: 0.85rem;
+  padding: 1rem $gutter;
+  color: $fontColor;
+  text-align: center;
+  // line-height: $leading;
+  a {
+    color: $greyColor;
+  }
+  p {
+    margin: 0;
+    font-weight: $lightWeight;
+    text-align: center;
+  }
+}
