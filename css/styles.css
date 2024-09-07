@@ -412,7 +412,7 @@ body {
 
 header {
   display: grid;
-  grid-template-columns: 50px auto;
+  grid-template-columns: auto 1fr auto;
   -moz-column-gap: 10px;
        column-gap: 10px;
   align-items: center;
@@ -429,9 +429,24 @@ header span {
   font-weight: 200;
   color: #B68D40;
 }
+header a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+header p:hover {
+  transform: translateY(5px);
+  transition: transform 1s ease;
+}
+
+.header-phone {
+  grid-column: 3;
+  text-align: right;
+  margin: 0;
+}
 
 #navWrapper {
-  background-color: #aeb4a9;
+  background-color: #2D7670;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -444,18 +459,23 @@ nav ul li {
   list-style-type: none;
 }
 nav ul li a {
-  color: #262626;
+  color: #F4EBD0;
   text-decoration: none;
   display: block;
   padding: 0.8rem 10px;
 }
 nav ul li.active a {
   background-color: rgba(255, 255, 255, 0.8);
-  color: #B68D40;
+  color: #262626;
   border-radius: 5px;
 }
 
 /* --------------------------- MAIN --------------------------- */
+main h1 {
+  color: #F4EBD0;
+  text-align: center;
+}
+
 section {
   display: grid;
   grid-template-columns: 1fr;
@@ -484,6 +504,11 @@ section div p {
   padding: 0 0 0.6rem 0.6rem;
   margin: 0;
   background-color: #D6AD60;
+}
+
+div:hover {
+  transform: translateY(5px);
+  transition: transform 1s ease;
 }
 
 section div:hover {
@@ -531,8 +556,7 @@ footer p {
     font-size: 1rem;
   }
   nav ul li a:hover {
-    -webkit-text-decoration: underline 2px blue;
-            text-decoration: underline 2px blue;
+    transform: translateY(5px);
   }
   section {
     grid-template-columns: 1fr 1fr;

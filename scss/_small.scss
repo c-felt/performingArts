@@ -28,7 +28,8 @@ body {
 }
 header {
   display: grid;
-  grid-template-columns: 50px auto;
+  // grid-template-columns: 50px auto;
+  grid-template-columns: auto 1fr auto;
   column-gap: $gutter;
   align-items: center; //vertically
   padding: 0.5rem $gutter;
@@ -43,10 +44,24 @@ header {
     font-weight: $lightWeight;
     color: $primaryColor;
   }
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  p:hover {
+    transform: translateY(5px);
+    transition: transform 1s ease;
+  }
+}
+.header-phone {
+  grid-column: 3;
+  text-align: right;
+  margin:0;
 }
 
 #navWrapper {
-  background-color: #aeb4a9;
+  background-color: #2D7670;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -59,14 +74,14 @@ nav {
     list-style-type: none;
   }
   ul li a {
-    color: $fontColor;
+    color: #F4EBD0;
     text-decoration: none;
     display: block;
     padding: 0.8rem $gutter;
   }
   ul li.active a {
     background-color: rgba(255, 255, 255, 0.8);
-    color: $primaryColor;
+    color: $fontColor;
     border-radius: 5px;
   }
 }
@@ -92,6 +107,11 @@ nav {
 //   h2 {font-size: 1.2rem;}
 //   img {display: block; width: 100%; height:auto;}
 // }
+
+main h1 {
+  color: #F4EBD0;
+  text-align: center;
+}
 
 section {
   display: grid;
@@ -122,6 +142,12 @@ section div {
     margin: 0;
     background-color: #D6AD60;
   }
+  
+}
+
+div:hover {
+  transform: translateY(5px);
+  transition: transform 1s ease;
 }
 
 section div:hover {

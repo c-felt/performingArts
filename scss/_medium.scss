@@ -19,7 +19,8 @@ nav {
         // adds margin to top and bottom
     }
     ul li a:hover {
-        text-decoration: underline 2px $accentColor;
+        transform: translateY(5px);
+        // text-decoration: underline 2px $accentColor;
     }
 }
 
